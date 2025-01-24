@@ -5,7 +5,7 @@ JoinFaces War Example
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=joinfaces_joinfaces-maven-war-example&metric=bugs)](https://sonarcloud.io/dashboard?id=joinfaces_joinfaces-maven-war-example)
 [![License](http://img.shields.io/:license-apache-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
 
-This SAP (Single Page Application) illustrates JSF usage inside WAR packaged Spring Boot Application.
+This SAP (Single Page Application) illustrates Jakarta Faces usage inside WAR packaged Spring Boot Application.
 
 [JoinFaces](https://joinfaces.org) autoconfigures 
 [PrimeFaces](https://primefaces.org/), 
@@ -55,7 +55,7 @@ Includes joinfaces starter dependency. All other jsf dependencies are included t
 
 ```xml
 <properties>
-   <joinfaces.version>5.4.0-rc1</joinfaces.version>
+   <joinfaces.version>5.5.0-m1</joinfaces.version>
 </properties>
 
 <dependencyManagement>
