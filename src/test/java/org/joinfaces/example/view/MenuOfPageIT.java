@@ -18,14 +18,11 @@ package org.joinfaces.example.view;
 
 import org.joinfaces.example.JoinFacesExampleApplication;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
 
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-@ExtendWith(SpringExtension.class)
 @SpringBootTest(classes = JoinFacesExampleApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class MenuOfPageIT extends AbstractPageIT {
 
@@ -39,7 +36,7 @@ public class MenuOfPageIT extends AbstractPageIT {
 		assertThat(page.getServletContainerTabHeaderText()).contains("Tomcat : Servlet Container");
 	}
 
-	//@Test
+	@Test
 	public void clickFileUpload() {
 		MenuOfPage menu = initElements(MenuOfPage.class);
 		menu.navegateTo();
@@ -49,7 +46,7 @@ public class MenuOfPageIT extends AbstractPageIT {
 		assertThat(page.isDownloadButtonEnabled()).isFalse();
 	}
 
-	//@Test
+	@Test
 	public void clickCustomInput() {
 		MenuOfPage menu = initElements(MenuOfPage.class);
 		menu.navegateTo();
@@ -59,7 +56,7 @@ public class MenuOfPageIT extends AbstractPageIT {
 		assertThat(page.getOutputText()).isEqualTo("You entered: null");
 	}
 
-	//@Test
+	@Test
 	public void clickMyTag() {
 		MenuOfPage menu = initElements(MenuOfPage.class);
 		menu.navegateTo();
@@ -79,7 +76,7 @@ public class MenuOfPageIT extends AbstractPageIT {
 		assertThat(page.getHiCCText()).isEqualTo("Hi Composite Component");
 	}
 
-	//@Test
+	@Test
 	public void clickWelcomeConverter() {
 		MenuOfPage menu = initElements(MenuOfPage.class);
 		menu.navegateTo();
