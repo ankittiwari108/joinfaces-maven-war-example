@@ -44,7 +44,6 @@ public class SecurityConfig {
 	/**
 	 * Configure security.
 	 * @param http security
-	 * @param mvc request matcher builder
 	 * @return security filter chain configured
 	 **/
 	@Bean
