@@ -64,6 +64,19 @@ public class StarterPageIT extends AbstractPageIT {
 	}
 
 	@Test
+	public void clickOpenWebBeans() {
+		StarterPage starterPage = initElements(StarterPage.class);
+		starterPage.navegateTo();
+
+		starterPage.clickCdiImplementationTab();
+		starterPage.clickOpenWebBeans();
+		assertThat(starterPage.getCdiImplementationTabHeaderText()).contains("OpenWebBeans");
+
+		starterPage.clickPomTab();
+		assertThat(starterPage.getPomContent()).contains("openwebbeans-spring-boot-starter");
+	}
+
+	@Test
 	public void clickSecurity() {
 		StarterPage starterPage = initElements(StarterPage.class);
 		starterPage.navegateTo();
@@ -103,6 +116,19 @@ public class StarterPageIT extends AbstractPageIT {
 	}
 
 	@Test
+	public void clickBootsFaces() {
+		StarterPage starterPage = initElements(StarterPage.class);
+		starterPage.navegateTo();
+
+		starterPage.clickJoinFacesComponentsTab();
+		starterPage.clickBootsFaces();
+		assertThat(starterPage.getJoinFacesComponentsTabHeaderText()).contains("BootsFaces");
+
+		starterPage.clickPomTab();
+		assertThat(starterPage.getPomContent()).contains("bootsfaces-spring-boot-starter");
+	}
+
+	@Test
 	public void clickOmnifaces() {
 		StarterPage starterPage = initElements(StarterPage.class);
 		starterPage.navegateTo();
@@ -126,19 +152,6 @@ public class StarterPageIT extends AbstractPageIT {
 
 		starterPage.clickPomTab();
 		assertThat(starterPage.getPomContent()).contains("rewrite-spring-boot-starter");
-	}
-
-	@Test
-	public void clickWeld() {
-		StarterPage starterPage = initElements(StarterPage.class);
-		starterPage.navegateTo();
-
-		starterPage.clickJoinFacesAddonsTab();
-		starterPage.clickWeld();
-		assertThat(starterPage.getJoinFacesAddonsTabHeaderText()).contains("Weld");
-
-		starterPage.clickPomTab();
-		assertThat(starterPage.getPomContent()).contains("weld-spring-boot-starter");
 	}
 
 }

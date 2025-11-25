@@ -48,6 +48,8 @@ public class StarterMBean implements Serializable {
 
 	private static final String MOJARRA = "Mojarra";
 
+	private static final String WELD = "Weld";
+
 	@Getter
 	@Setter
 	private String servletContainer = TOMCAT;
@@ -55,6 +57,10 @@ public class StarterMBean implements Serializable {
 	@Getter
 	@Setter
 	private String jsfImplementation = MOJARRA;
+
+	@Getter
+	@Setter
+	private String cdiImplementation = WELD;
 
 	@SuppressFBWarnings("EI_EXPOSE_REP")
 	@Getter
@@ -170,9 +176,13 @@ public class StarterMBean implements Serializable {
 		return this.jsfImplementation.equals(MOJARRA);
 	}
 
+	public boolean isWeldSelected() {
+		return this.cdiImplementation.equals(WELD);
+	}
+
 	/**
-	 * Create pom text.
-	 * @return pom text
+	 * Create pom example.
+	 * @return pom example.
 	 */
 	public String getPom() throws IOException, TemplateException {
 		Map<String, Object> map = new HashMap<>();
@@ -182,8 +192,8 @@ public class StarterMBean implements Serializable {
 	}
 
 	/**
-	 * Set pom text.
-	 * @param pom text
+	 * Set pom example.
+	 * @param pom example
 	 */
 	public void setPom(String pom) {
 	}
