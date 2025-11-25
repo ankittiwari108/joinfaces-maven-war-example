@@ -1,7 +1,6 @@
-
 name: Java CI
 
-on: 
+on:
   push:
   pull_request:
 
@@ -11,7 +10,7 @@ jobs:
     name: Java ${{ matrix.java }}
     strategy:
       matrix:
-        java: [17,21,25]
+        java: [17, 21, 25]
 
     steps:
       - uses: actions/checkout@v6.0.0
@@ -21,21 +20,21 @@ jobs:
         uses: actions/setup-java@v5.0.0
         with:
           java-version: ${{ matrix.java }}
-          distribution: 'temurin'
+          distribution: "temurin"
 
-      - name: Set up GraalVM ${{ matrix.java }} 
+      - name: Set up GraalVM ${{ matrix.java }}
         if: ${{ matrix.java == 25 }}
         uses: graalvm/setup-graalvm@v1.4.2
         with:
-          java-version: '25'
-          distribution: 'graalvm-community'
+          java-version: "25"
+          distribution: "graalvm-community"
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          native-image-job-reports: 'true'
+          native-image-job-reports: "true"
 
       - name: Cache local Maven repository
         uses: actions/cache@v4.3.0
         with:
-          path: ~/.m2/repository
+          path: ~/.m2
           key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
           restore-keys: |
             ${{ runner.os }}-maven-
