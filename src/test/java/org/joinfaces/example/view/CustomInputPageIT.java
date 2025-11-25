@@ -24,10 +24,10 @@ import org.springframework.boot.test.context.SpringBootTest;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest(classes = JoinFacesExampleApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class CustomInputPageIT extends AbstractPageIT {
+class CustomInputPageIT extends AbstractPageIT {
 
 	@Test
-	public void checkCustomInputElement() {
+	void checkCustomInputElement() {
 		CustomInputPage customInputPage = initElements(CustomInputPage.class);
 		customInputPage.navegateTo();
 
@@ -35,7 +35,7 @@ public class CustomInputPageIT extends AbstractPageIT {
 	}
 
 	@Test
-	public void submitHello() {
+	void submitHello() {
 		CustomInputPage customInputPage = initElements(CustomInputPage.class);
 		customInputPage.navegateTo();
 

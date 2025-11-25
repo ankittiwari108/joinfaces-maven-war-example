@@ -24,10 +24,10 @@ import org.springframework.boot.test.context.SpringBootTest;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest(classes = JoinFacesExampleApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class IndexPageIT extends AbstractPageIT {
+class IndexPageIT extends AbstractPageIT {
 
 	@Test
-	public void checkRedirectUrl() {
+	void checkRedirectUrl() {
 		IndexPage indexPage = initElements(IndexPage.class);
 		indexPage.navegateTo();
 

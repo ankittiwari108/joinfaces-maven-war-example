@@ -21,10 +21,10 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest(classes = JoinFacesExampleApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class JoinFacesExampleApplicationIT {
+class JoinFacesExampleApplicationIT {
 
 	@Test
-	public void contextLoads() {
+	void contextLoads() {
 	}
 
 }

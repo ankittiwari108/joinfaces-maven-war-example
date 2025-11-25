@@ -24,10 +24,10 @@ import org.springframework.boot.test.context.SpringBootTest;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest(classes = JoinFacesExampleApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class HelloTagPageIT extends AbstractPageIT {
+class HelloTagPageIT extends AbstractPageIT {
 
 	@Test
-	public void checkTagElement() {
+	void checkTagElement() {
 		HelloTagPage helloTagPage = initElements(HelloTagPage.class);
 		helloTagPage.navegateTo();
 

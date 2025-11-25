@@ -24,10 +24,10 @@ import org.springframework.boot.test.context.SpringBootTest;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest(classes = JoinFacesExampleApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class HiCCPageIT extends AbstractPageIT {
+class HiCCPageIT extends AbstractPageIT {
 
 	@Test
-	public void checkCompositeComponentElement() {
+	void checkCompositeComponentElement() {
 		HiCCPage hiCCPage = initElements(HiCCPage.class);
 		hiCCPage.navegateTo();
 

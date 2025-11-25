@@ -24,10 +24,10 @@ import org.springframework.boot.test.context.SpringBootTest;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest(classes = JoinFacesExampleApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class WelcomeConverterPageIT extends AbstractPageIT {
+class WelcomeConverterPageIT extends AbstractPageIT {
 
 	@Test
-	public void checkCustomInputElement() {
+	void checkCustomInputElement() {
 		WelcomeConverterPage page = initElements(WelcomeConverterPage.class);
 		page.navegateTo();
 
@@ -35,7 +35,7 @@ public class WelcomeConverterPageIT extends AbstractPageIT {
 	}
 
 	@Test
-	public void submitHello() {
+	void submitHello() {
 		WelcomeConverterPage page = initElements(WelcomeConverterPage.class);
 		page.navegateTo();
 

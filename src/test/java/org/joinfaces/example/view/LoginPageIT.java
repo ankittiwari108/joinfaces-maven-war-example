@@ -24,10 +24,10 @@ import org.springframework.boot.test.context.SpringBootTest;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest(classes = JoinFacesExampleApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class LoginPageIT extends AbstractPageIT {
+class LoginPageIT extends AbstractPageIT {
 
 	@Test
-	public void checkTitle() {
+	void checkTitle() {
 		LoginPage loginPage = initElements(LoginPage.class);
 		loginPage.navegateTo();
 
@@ -35,7 +35,7 @@ public class LoginPageIT extends AbstractPageIT {
 	}
 
 	@Test
-	public void loginWithAdminCredentials() {
+	void loginWithAdminCredentials() {
 		LoginPage loginPage = initElements(LoginPage.class);
 		loginPage.navegateTo();
 
