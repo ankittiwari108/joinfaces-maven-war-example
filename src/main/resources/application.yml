@@ -12,8 +12,6 @@ tomcat:
   version: @tomcat.version@
 jetty:
   version: @jetty.version@
-undertow:
-  version: @undertow.version@
 application-users:
   users-credentials:
     - username: persapiens
