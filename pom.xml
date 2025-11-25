@@ -48,7 +48,7 @@
         <maven-checkstyle-plugin.version>3.6.0</maven-checkstyle-plugin.version>
         <spring-javaformat.version>0.0.47</spring-javaformat.version>
 
-        <checkstyle.version>12.1.1</checkstyle.version>
+        <checkstyle.version>12.1.2</checkstyle.version>
 
         <check.dir>src/checkconfig</check.dir>
         <pmd.dir>${check.dir}/pmd</pmd.dir>
@@ -234,6 +234,13 @@
                         <failOnWarning>true</failOnWarning>
                         <failOnError>true</failOnError>
                         <showDeprecation>true</showDeprecation>
+                        <annotationProcessorPaths>
+                            <path>
+                                <groupId>org.projectlombok</groupId>
+                                <artifactId>lombok</artifactId>
+                                <version>${lombok.version}</version>
+                            </path>
+                        </annotationProcessorPaths>
                     </configuration>
                 </plugin>
                 <plugin>
