@@ -10,14 +10,14 @@ This SAP (Single Page Application) illustrates Jakarta Faces usage inside WAR pa
 [JoinFaces](https://joinfaces.org) autoconfigures 
 [PrimeFaces](https://primefaces.org/), 
 [PrimeFaces Extensions](https://primefaces-extensions.github.io/), 
-[Apache MyFaces Tobago](https://github.com/apache/myfaces-tobago), 
+[Apache MyFaces Tobago](https://github.com/apache/myfaces-tobago),
+[BootsFaces](https://www.bootsfaces.net/),
 [OmniFaces](https://omnifaces.org/), 
 [AdminFaces](https://adminfaces.github.io/site/), 
 [Mojarra](https://eclipse-ee4j.github.io/mojarra/) and 
 [MyFaces](http://myfaces.apache.org) libraries to run at embedded 
-[Tomcat](https://tomcat.apache.org/), 
-[Jetty](https://www.eclipse.org/jetty) or 
-[Undertow](https://undertow.io/). 
+[Tomcat](https://tomcat.apache.org/), or
+[Jetty](https://www.eclipse.org/jetty).
 It autoconfigures [Weld](https://weld.cdi-spec.org),
 [Apache OpenWebBeans](https://openwebbeans.apache.org/) and
 [Rewrite](https://www.ocpsoft.org/rewrite/) too.
